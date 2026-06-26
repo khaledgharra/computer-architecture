@@ -179,7 +179,6 @@ int main(int argc, char **argv) {
             if (op == 'r' || WrAlloc) {
                 unsigned long l1_evicted;
                 if (L1.insert(addr, l1_evicted)) {
-                    // L1 write-back: update L2 LRU for evicted block
                     L2.access(l1_evicted);
                 }
             }
@@ -202,7 +201,6 @@ int main(int argc, char **argv) {
 
         unsigned long l1_evicted;
         if (L1.insert(addr, l1_evicted)) {
-            // L1 write-back: evicted block goes to L2, updating its LRU position
             L2.access(l1_evicted);
         }
     }
