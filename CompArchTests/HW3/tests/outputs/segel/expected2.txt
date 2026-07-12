@@ -1,0 +1,31 @@
+Reading the opcodes latency info from ./inputs/segel/opcode2.dat ... Got latency for 17 opcodes
+Reading the program file ./inputs/segel/example2.in ... Found 14 instructions
+getProgDepth()==35
+getDepDepth(0)==0
+getDepDepth(1)==0
+getDepDepth(2)==0
+getDepDepth(3)==9
+getDepDepth(4)==0
+getDepDepth(5)==11
+getDepDepth(6)==0
+getDepDepth(7)==12
+getDepDepth(8)==9
+getDepDepth(9)==23
+getDepDepth(10)==1
+getDepDepth(11)==23
+getDepDepth(12)==23
+getDepDepth(13)==23
+getInstDeps(0)=={-1,-1}
+getInstDeps(1)=={-1,-1}
+getInstDeps(2)=={-1,-1}
+getInstDeps(3)=={1,-1}
+getInstDeps(4)=={-1,-1}
+getInstDeps(5)=={-1,4}
+getInstDeps(6)=={-1,-1}
+getInstDeps(7)=={2,-1}
+getInstDeps(8)=={-1,1}
+getInstDeps(9)=={-1,7}
+getInstDeps(10)=={0,-1}
+getInstDeps(11)=={-1,7}
+getInstDeps(12)=={3,2}
+getInstDeps(13)=={0,8}

@@ -1,0 +1,16 @@
+# Build artifacts
+*.o
+hw3/dflow_calc
+hw3/dflow_main.o
+hw3/dflow_calc.o
+hw2/cacheSim
+hw2/.idea/
+hw2/hw2_213728397_214612368tar.zip
+hw2/submission.zip
+CompArchTests/HW3/dflow_calc
+CompArchTests/HW3/dflow_calc.o
+CompArchTests/HW3/dflow_main.o
+CompArchTests/HW3/N&R_INCLUDE_SEGEL/dflow_calc
+CompArchTests/HW3/tests/dflow_calc
+CompArchTests/HW1/CompArch-hw1/bp_main
+CompArchTests/HW4/*.o

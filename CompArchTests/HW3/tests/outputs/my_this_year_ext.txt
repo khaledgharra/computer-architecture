@@ -1,0 +1,3 @@
+Usage: dflow_calc <opcodes info. filename> <program filename> [<Query> <Query>...]
+	Query: [p|d]<program line#> - Report [dependency depth| dependencies of this inst.]
+Example: dflow_calc opcode.dat example1.in d4 d7 p12

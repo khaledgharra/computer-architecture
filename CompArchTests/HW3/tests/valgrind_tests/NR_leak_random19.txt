@@ -1,0 +1,137 @@
+==16020== Memcheck, a memory error detector
+==16020== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==16020== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==16020== Command: ./dflow_calc ./inputs/random/opcode19 ./inputs/random/test_example19 p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28 p29 p30 p31 p32 p33 p34 p35 p36 p37 p38 p39 p40 p41 p42 p43 p44 p45 p46 p47 p48 p49 d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 d12 d13 d14 d15 d16 d17 d18 d19 d20 d21 d22 d23 d24 d25 d26 d27 d28 d29 d30 d31 d32 d33 d34 d35 d36 d37 d38 d39 d40 d41 d42 d43 d44 d45 d46 d47 d48 d49
+==16020== 
+Reading the opcodes latency info from ./inputs/random/opcode19 ... Got latency for 31 opcodes
+Reading the program file ./inputs/random/test_example19 ... Found 50 instructions
+getProgDepth()==35
+getDepDepth(0)==0
+getDepDepth(1)==0
+getDepDepth(2)==0
+getDepDepth(3)==0
+getDepDepth(4)==9
+getDepDepth(5)==0
+getDepDepth(6)==0
+getDepDepth(7)==9
+getDepDepth(8)==10
+getDepDepth(9)==0
+getDepDepth(10)==0
+getDepDepth(11)==0
+getDepDepth(12)==0
+getDepDepth(13)==0
+getDepDepth(14)==0
+getDepDepth(15)==3
+getDepDepth(16)==7
+getDepDepth(17)==9
+getDepDepth(18)==16
+getDepDepth(19)==18
+getDepDepth(20)==0
+getDepDepth(21)==18
+getDepDepth(22)==18
+getDepDepth(23)==0
+getDepDepth(24)==25
+getDepDepth(25)==10
+getDepDepth(26)==0
+getDepDepth(27)==25
+getDepDepth(28)==0
+getDepDepth(29)==4
+getDepDepth(30)==10
+getDepDepth(31)==12
+getDepDepth(32)==10
+getDepDepth(33)==18
+getDepDepth(34)==0
+getDepDepth(35)==1
+getDepDepth(36)==25
+getDepDepth(37)==9
+getDepDepth(38)==25
+getDepDepth(39)==0
+getDepDepth(40)==9
+getDepDepth(41)==11
+getDepDepth(42)==3
+getDepDepth(43)==18
+getDepDepth(44)==9
+getDepDepth(45)==11
+getDepDepth(46)==25
+getDepDepth(47)==15
+getDepDepth(48)==8
+getDepDepth(49)==15
+getInstDeps(0)=={-1,-1}
+getInstDeps(1)=={-1,-1}
+getInstDeps(2)=={-1,-1}
+getInstDeps(3)=={-1,-1}
+getInstDeps(4)=={-1,0}
+getInstDeps(5)=={-1,-1}
+getInstDeps(6)=={-1,-1}
+getInstDeps(7)=={3,-1}
+getInstDeps(8)=={7,-1}
+getInstDeps(9)=={-1,-1}
+getInstDeps(10)=={-1,-1}
+getInstDeps(11)=={-1,-1}
+getInstDeps(12)=={-1,-1}
+getInstDeps(13)=={-1,-1}
+getInstDeps(14)=={-1,-1}
+getInstDeps(15)=={-1,5}
+getInstDeps(16)=={14,-1}
+getInstDeps(17)=={0,15}
+getInstDeps(18)=={12,17}
+getInstDeps(19)=={-1,18}
+getInstDeps(20)=={-1,-1}
+getInstDeps(21)=={16,18}
+getInstDeps(22)=={18,3}
+getInstDeps(23)=={-1,-1}
+getInstDeps(24)=={22,0}
+getInstDeps(25)=={7,16}
+getInstDeps(26)=={-1,-1}
+getInstDeps(27)=={-1,22}
+getInstDeps(28)=={-1,-1}
+getInstDeps(29)=={-1,2}
+getInstDeps(30)=={26,6}
+getInstDeps(31)=={30,6}
+getInstDeps(32)=={5,7}
+getInstDeps(33)=={-1,18}
+getInstDeps(34)=={-1,-1}
+getInstDeps(35)=={23,-1}
+getInstDeps(36)=={22,28}
+getInstDeps(37)=={0,5}
+getInstDeps(38)=={25,22}
+getInstDeps(39)=={-1,-1}
+getInstDeps(40)=={-1,35}
+getInstDeps(41)=={-1,29}
+getInstDeps(42)=={28,23}
+getInstDeps(43)=={-1,18}
+getInstDeps(44)=={28,0}
+getInstDeps(45)=={29,0}
+getInstDeps(46)=={22,-1}
+getInstDeps(47)=={16,44}
+getInstDeps(48)=={39,-1}
+getInstDeps(49)=={44,25}
+==16020== 
+==16020== HEAP SUMMARY:
+==16020==     in use at exit: 72,704 bytes in 1 blocks
+==16020==   total heap usage: 9 allocs, 8 frees, 88,872 bytes allocated
+==16020== 
+==16020== 72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+==16020==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==16020==    by 0x4EC3EFF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==16020==    by 0x40106F9: call_init.part.0 (dl-init.c:72)
+==16020==    by 0x401080A: call_init (dl-init.c:30)
+==16020==    by 0x401080A: _dl_init (dl-init.c:120)
+==16020==    by 0x4000C69: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==16020==    by 0x66: ???
+==16020==    by 0xFFEFFFF96: ???
+==16020==    by 0xFFEFFFFA3: ???
+==16020==    by 0xFFEFFFFBC: ???
+==16020==    by 0xFFEFFFFDB: ???
+==16020==    by 0xFFEFFFFDE: ???
+==16020==    by 0xFFEFFFFE1: ???
+==16020== 
+==16020== LEAK SUMMARY:
+==16020==    definitely lost: 0 bytes in 0 blocks
+==16020==    indirectly lost: 0 bytes in 0 blocks
+==16020==      possibly lost: 0 bytes in 0 blocks
+==16020==    still reachable: 72,704 bytes in 1 blocks
+==16020==         suppressed: 0 bytes in 0 blocks
+==16020== 
+==16020== For counts of detected and suppressed errors, rerun with: -v
+==16020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
